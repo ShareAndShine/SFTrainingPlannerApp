@@ -1,0 +1,16 @@
+<template>
+    <template for:each={contacts.data} for:item="contact">
+       
+                <p key={contact.Id}>{contact.Name}</p>
+       
+    </template>
+
+
+    <lightning-card title="SF Data - Using Wired Function !!!">
+        <template for:each={contactsEmail} for:item="contactEmail">
+        
+            <p key={contactEmail.Id}>{contactEmail.Email}</p>
+
+        </template>
+    </lightning-card>
+</template>

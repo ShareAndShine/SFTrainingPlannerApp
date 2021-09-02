@@ -1,0 +1,16 @@
+<template>
+
+    <!-- input , button to search, card to show all topics -->
+
+    <lightning-input type="text" placeholder="enter topics category" label="Topic category" 
+    class="slds-p-arounc_medium" value={catInput}>
+
+    </lightning-input>
+
+    <lightning-button variant="success" label="Show Topics" onclick={handleShowTopicClick}></lightning-button>
+
+    <template for:each={topics} for:item="topic">
+        <p key={topic.Id}><b>Topic Name:</b>{topic.Topic_Name__c}</p>
+    </template>
+    
+</template>

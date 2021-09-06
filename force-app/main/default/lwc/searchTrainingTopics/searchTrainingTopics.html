@@ -1,16 +1,23 @@
 <template>
 
-    <!-- input , button to search, card to show all topics -->
+    <lightning-card title="Searh Topic By Category" class="slds-var-m-around_small">
+        <div class="slds-p-around_small">
+            <!-- input , button to search, card to show all topics -->
 
-    <lightning-input type="text" placeholder="enter topics category" label="Topic category" 
-    class="slds-p-arounc_medium" value={catInput}>
+            <lightning-input type="text" placeholder="enter topics category" label="Topic category"
+                class="slds-p-arounc_medium" value={catInput}>
 
-    </lightning-input>
+            </lightning-input>
 
-    <lightning-button variant="success" label="Show Topics" onclick={handleShowTopicClick}></lightning-button>
+            <lightning-button variant="success" label="Show Topics" onclick={handleShowTopicClick} 
+            class="slds-align_absolute-center"></lightning-button>
 
-    <template for:each={topics} for:item="topic">
-        <p key={topic.Id}><b>Topic Name:</b>{topic.Topic_Name__c}</p>
-    </template>
-    
+            <template for:each={topics} for:item="topic">
+                <p key={topic.Id}><b>Topic Name:</b>{topic.Topic_Name__c}</p>
+            </template>
+
+        </div>
+    </lightning-card>
+
+
 </template>

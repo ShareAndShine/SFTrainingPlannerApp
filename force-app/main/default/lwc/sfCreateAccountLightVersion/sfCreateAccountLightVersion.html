@@ -1,0 +1,10 @@
+<template>
+
+    <lightning-card title="Quick Account creation " class="slds-var-m-around_small">
+        <div class="slds-var-m-around_small">
+            <lightning-input label="Account ID" value={accountId} disabled></lightning-input>            
+            <lightning-input label="Account Name" onchange={handleAccNameChange} class="slds-m-bottom_small"></lightning-input>
+            <lightning-button label="Create Account" variant="brand" onclick={handleCreateAccount} class="slds-m-bottom_small"></lightning-button>
+            </div>
+    </lightning-card>    
+</template>

@@ -1,8 +1,13 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, wire } from 'lwc';
+import {fireEvent} from 'c/pubsub';
+import { CurrentPageReference } from 'lightning/navigation';
 
 export default class HospitalEmergencyBeacon extends LightningElement {
 
     _natureOfEmergency;
+
+    @wire(CurrentPageReference) pageReference; 
+
     handleEmergencyCodeClick(event)
     {
         this._natureOfEmergency =  event.target.label;
@@ -15,6 +20,9 @@ export default class HospitalEmergencyBeacon extends LightningElement {
         this.dispatchEvent(hospitalemergencycodeevent);
 
         console.log("Event dispatched !!!");
+
+        //Unrelated comms
+        fireEvent(this.pageReference, 'pubsubemergencytrigger', this._natureOfEmergency);
 
     }
 }

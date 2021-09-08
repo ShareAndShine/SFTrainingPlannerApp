@@ -1,17 +1,19 @@
 import { LightningElement, wire } from 'lwc';
-import {fireEvent} from 'c/pubsub';
-import { CurrentPageReference } from 'lightning/navigation';
+
+import { fireEvent } from 'c/pubsub';
+import { CurrentPageReference} from 'lightning/navigation';
 
 export default class HospitalEmergencyBeacon extends LightningElement {
 
     _natureOfEmergency;
 
-    @wire(CurrentPageReference) pageReference; 
+   //Find the current page using @wire LDS 
+   @wire(CurrentPageReference) pageReference;
 
     handleEmergencyCodeClick(event)
     {
         this._natureOfEmergency =  event.target.label;
-        console.log("You have triggered: " + this._natureOfEmergency );
+    
 
         //initalize event msg to parent 
         const hospitalemergencycodeevent = new CustomEvent("emergencytrigger", {detail: this._natureOfEmergency} );
@@ -19,9 +21,12 @@ export default class HospitalEmergencyBeacon extends LightningElement {
         //Dispatch to Parent
         this.dispatchEvent(hospitalemergencycodeevent);
 
-        console.log("Event dispatched !!!");
+        //console.log("Event dispatched !!!");
 
-        //Unrelated comms
+        // fireEvent() to send emergency code to an unrelated component or component in a different hierarchy
+        console.log('this.pageReference::' + JSON.stringify(this.pageReference));
+        console.log("You have triggered: " + this._natureOfEmergency );
+        
         fireEvent(this.pageReference, 'pubsubemergencytrigger', this._natureOfEmergency);
 
     }

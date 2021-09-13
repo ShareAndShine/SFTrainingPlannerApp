@@ -1,4 +1,4 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 import {  createRecord } from 'lightning/uiRecordApi';
 import SF_ACCOUNT_OBJECT from '@salesforce/schema/Account';
 import SF_ACC_NAME from '@salesforce/schema/Account.Name';
@@ -9,6 +9,7 @@ export default class SfCreateAccountLightVersion extends LightningElement {
 
     accountname = '';
     accountId;
+    @api strTitle ;
 
     handleAccNameChange(event)
     {

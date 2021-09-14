@@ -9,8 +9,9 @@ export default class SfCreateAccountLightVersion extends LightningElement {
 
     accountname = '';
     accountId;
-    @api strTitle ;
-
+    
+    @api strTitle; 
+    
     handleAccNameChange(event)
     {
         this.accountname = event.detail.value;

@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Contract Status" class="slds-text-color_weak" icon-name="standard:search">
+        <template for:each={allContractStatus} for:item="contract" class="slds-p-around_medium">       
+            <div key={contract.Id} class="slds-p-around_small">
+                <ul>
+                    <li>
+                        <b>Contract Name::</b>{contract.Description}
+                    </li>
+                    <li>
+                        <b>Contract Start Date::</b>{contract.StartDate}
+                    </li>
+                    <li>
+                        <b>Contract Term::</b>{contract.ContractTerm}
+                    </li>
+                    <li>
+                        <b>Contract Status::</b>{contract.Status}
+                    </li>
+                </ul>
+            </div>
+            
+   
+     </template>
+    </lightning-card>
+
+</template>

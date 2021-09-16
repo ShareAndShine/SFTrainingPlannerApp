@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <c:zChildForAura message="Hi from aura parent"></c:zChildForAura>
+</aura:component>	

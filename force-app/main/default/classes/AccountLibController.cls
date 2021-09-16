@@ -10,3 +10,4 @@ public with sharing class AccountLibController {
                 from Contract where AccountId =:strAccountId WITH SECURITY_ENFORCED];
     }
 }
+

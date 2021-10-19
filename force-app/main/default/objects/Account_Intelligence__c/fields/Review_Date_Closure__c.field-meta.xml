@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Date_Closure__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(MOD(Review_Date__c - DATE(1900, 1, 7), 7), 0, Review_Date__c +3, 1, Review_Date__c+3, 2, Review_Date__c +3,3, Review_Date__c+5, 4, Review_Date__c+5, 5, Review_Date__c+5, 6, Review_Date__c+4,null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Review Date Closure</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

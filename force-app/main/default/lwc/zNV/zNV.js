@@ -7,7 +7,6 @@ export default class ZNV extends NavigationMixin(LightningElement) {
     //Open an external web page
     openWebPage()
     {
-     
         this[NavigationMixin.Navigate]({
                 type:'standard__webPage',
                 attributes: {

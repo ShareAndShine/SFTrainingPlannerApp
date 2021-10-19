@@ -18,7 +18,7 @@ export default class Example extends LightningElement {
         return getFieldValue(this.account.data, PHONE_FIELD);
     }
 
-    get industry(){ 
+    get industry(){
         return getFieldValue(this.account.data, INDUSTRY_FIELD);
     }
     

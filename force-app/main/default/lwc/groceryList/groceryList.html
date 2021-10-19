@@ -1,0 +1,41 @@
+<template>
+    
+    
+    
+    <!-- <p><b>Grocery Category:</b>{groceryitem}</p> -->
+    
+   
+    
+    <lightning-card title="Groceries List" class="slds-m-horizontal_small" icon-name="standatd:search">
+        <c-add-grocery onaddgrocerytrigger={handleGroceryList}></c-add-grocery>
+        <!-- <p><b>Grocery Item:</b>{groceryitem}</p> -->
+        <p>{groceryitemMessage}</p>
+        
+        <!-- <template for:each={groceries} for:item="grocery">
+            <div key={grocery.item}>
+             <p><b>Grocery Category:</b>{grocery.grocerycategory}</p>
+             <p><b>Grocery Item:</b>{grocery.groceryitem}</p>
+            </div>
+             
+         </template> -->
+         
+         <template for:each={grocerieslist} for:item="grocerieslistKey">
+            <div key={grocerieslistKey.key}>
+                <!-- <p><b>Grocery Category:</b>{grocerieslistKey.key}</p>
+                <p><b>Grocery Item:</b>{grocerieslistKey.value}</p> -->
+
+                <div title={grocerieslistKey.key}>
+                    {grocerieslistKey.key}</div>
+                <div title={grocerieslistKey.value}>
+                    {grocerieslistKey.value}
+                </div>
+
+            </div>
+               
+           
+         </template>
+
+     
+    </lightning-card>
+   
+</template>

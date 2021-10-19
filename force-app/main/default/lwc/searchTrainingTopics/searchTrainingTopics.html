@@ -9,8 +9,7 @@
 
             </lightning-input>
 
-            <lightning-button variant="success" label="Show Topics" onclick={handleShowTopicClick} 
-            class="slds-align_absolute-center"></lightning-button>
+            <lightning-button variant="success" label="Show Topics" onclick={handleShowTopicClick}></lightning-button>
 
             <template for:each={topics} for:item="topic">
                 <p key={topic.Id}><b>Topic Name:</b>{topic.Topic_Name__c}</p>

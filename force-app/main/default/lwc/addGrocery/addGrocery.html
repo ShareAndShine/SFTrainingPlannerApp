@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Grocery List" class="slds-var-m-around_small">
+        <div class="slds-p-around_small">
+            <!-- input , button to search, card to show all topics -->
+
+            <lightning-input type="text" placeholder="Grocery Item" label="Grocery Item" data-name="Grocery-Item"
+            class="slds-p-arounc_medium" value={itemInput}>
+
+             </lightning-input>
+
+
+            <lightning-input type="text" placeholder="Grocery category" label="Category" data-name="Grocery-Category"
+                class="slds-p-arounc_medium" value={catInput}>
+
+            </lightning-input>
+
+            <lightning-button variant="success" label="Add Item" onclick={handleAdditemClick} 
+            class="slds-align_absolute-center slds-p-arounc_medium" ></lightning-button>
+
+           
+
+        </div>
+    </lightning-card>
+
+</template>

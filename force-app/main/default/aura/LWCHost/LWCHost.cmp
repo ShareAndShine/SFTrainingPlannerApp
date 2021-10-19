@@ -1,3 +1,6 @@
 <aura:component implements="flexipage:availableForAllPageTypes" access="global">
-    <c:zChildForAura message="Hi from aura parent"></c:zChildForAura>
+
+<!-- Add LWC -->
+<c:childLWCAura strCardtitle = 'Aura calling LWC !!!!'></c:childLWCAura>
+
 </aura:component>

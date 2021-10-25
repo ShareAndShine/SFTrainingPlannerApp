@@ -1,7 +1,8 @@
 /*
 // Print a msg
 console.log("Welcome to JS Training !!!");
-
+// 
+//
 // Variables
 // Let , const, var
 
